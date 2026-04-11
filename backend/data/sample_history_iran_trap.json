@@ -1,0 +1,597 @@
+{
+  "title": "The Iran Trap — US-Iran Conflict Escalation",
+  "period": {
+    "start": "2023-10-01",
+    "end": "2026-06-30"
+  },
+  "description": "A counterfactual analysis of the US-Iran conflict trajectory from the October 7 Hamas attack through potential direct military confrontation, examining how decisions at key pivot points could have led to dramatically different outcomes in Middle Eastern geopolitics, global energy markets, and great-power competition.",
+  "baselineTimeline": [
+    {
+      "date": "2023-10-07",
+      "description": "Hamas launches surprise attack on southern Israel, killing over 1,200 people and taking 240+ hostages. Iran-backed proxies celebrate; global condemnation follows.",
+      "dimensionsAffected": ["NARRATIVE", "POLITICAL", "MILITARY"]
+    },
+    {
+      "date": "2023-10-08",
+      "description": "US deploys USS Gerald Ford carrier strike group to Eastern Mediterranean as show of force and deterrent signal to Iran and Hezbollah.",
+      "dimensionsAffected": ["MILITARY", "POLITICAL"]
+    },
+    {
+      "date": "2023-10-27",
+      "description": "Israel launches ground incursion into northern Gaza. International pressure mounts for humanitarian corridors.",
+      "dimensionsAffected": ["NARRATIVE", "MILITARY"]
+    },
+    {
+      "date": "2023-11-24",
+      "description": "Temporary ceasefire and hostage exchange. Brief diplomatic window opens then closes as fighting resumes.",
+      "dimensionsAffected": ["NARRATIVE", "POLITICAL"]
+    },
+    {
+      "date": "2024-01-11",
+      "description": "US and UK launch strikes against Houthi positions in Yemen after repeated attacks on Red Sea shipping.",
+      "dimensionsAffected": ["MILITARY", "ECONOMIC"]
+    },
+    {
+      "date": "2024-04-01",
+      "description": "Israel strikes Iranian consulate in Damascus, killing senior IRGC commanders. Major escalation threshold crossed.",
+      "dimensionsAffected": ["MILITARY", "POLITICAL", "NARRATIVE"]
+    },
+    {
+      "date": "2024-04-13",
+      "description": "Iran launches unprecedented direct drone and missile barrage against Israel. Most intercepted by coalition defense. Symbolic threshold shattered.",
+      "dimensionsAffected": ["MILITARY", "NARRATIVE", "POLITICAL"]
+    },
+    {
+      "date": "2024-06-01",
+      "description": "IAEA reports Iran has enriched uranium to 84% purity — technical threshold for weapons-grade material. International alarm intensifies.",
+      "dimensionsAffected": ["MILITARY", "POLITICAL", "NARRATIVE"]
+    },
+    {
+      "date": "2025-01-15",
+      "description": "New US administration takes hardline stance on Iran. Military options publicly discussed. Diplomatic channels narrow.",
+      "dimensionsAffected": ["POLITICAL", "MILITARY", "NARRATIVE"]
+    },
+    {
+      "date": "2025-04-01",
+      "description": "US conducts strikes on Iranian proxy infrastructure in Iraq and Syria. Iran threatens retaliation against Gulf state hosts of US forces.",
+      "dimensionsAffected": ["MILITARY", "POLITICAL", "ECONOMIC"]
+    },
+    {
+      "date": "2025-06-15",
+      "description": "Iran conducts naval exercises near Strait of Hormuz. Oil prices spike 30%. Global economic anxiety rises.",
+      "dimensionsAffected": ["ECONOMIC", "MILITARY", "NARRATIVE"]
+    }
+  ],
+  "pivotPoints": [
+    {
+      "id": "pp_oct7_response",
+      "date": "2023-10-07",
+      "description": "Israel's strategic response to the October 7 Hamas attack — the scope and duration of military operations in Gaza.",
+      "counterfactualPrompt": "What if Israel had negotiated a ceasefire within 30 days, prioritizing hostage recovery over ground invasion?",
+      "defaultOutcome": "Israel launches extended ground campaign in Gaza lasting months, with massive civilian casualties, eroding international support and empowering Iran's proxy narrative.",
+      "alternateOutcomes": [
+        {
+          "id": "ao_early_ceasefire",
+          "description": "Israel negotiates ceasefire within 30 days, secures hostage deal through Qatari mediation, limits ground operations to targeted raids.",
+          "stateDeltasByActor": {
+            "united_states": { "NARRATIVE": 15, "POLITICAL": 10, "ECONOMIC": 5, "MILITARY": -5 },
+            "israel": { "NARRATIVE": 20, "POLITICAL": -10, "MILITARY": -15 },
+            "iran": { "NARRATIVE": -20, "POLITICAL": -10, "MILITARY": -5 },
+            "saudi_arabia": { "NARRATIVE": 5, "POLITICAL": 10, "ECONOMIC": 5 },
+            "china": { "NARRATIVE": -5, "POLITICAL": 0, "ECONOMIC": 5 },
+            "russia": { "NARRATIVE": -10, "POLITICAL": -5 }
+          },
+          "unlocksPivotPoints": [],
+          "blockedByPivotPoints": []
+        },
+        {
+          "id": "ao_targeted_ops",
+          "description": "Israel conducts focused special operations targeting Hamas leadership while maintaining humanitarian corridors, avoiding ground invasion.",
+          "stateDeltasByActor": {
+            "united_states": { "NARRATIVE": 10, "POLITICAL": 5, "MILITARY": 0 },
+            "israel": { "NARRATIVE": 10, "POLITICAL": -5, "MILITARY": 5 },
+            "iran": { "NARRATIVE": -10, "POLITICAL": -5, "MILITARY": 0 },
+            "saudi_arabia": { "NARRATIVE": 5, "POLITICAL": 5 },
+            "china": { "NARRATIVE": 0, "ECONOMIC": 3 },
+            "russia": { "NARRATIVE": -5 }
+          },
+          "unlocksPivotPoints": [],
+          "blockedByPivotPoints": []
+        }
+      ]
+    },
+    {
+      "id": "pp_carrier_deployment",
+      "date": "2023-10-08",
+      "description": "US decision to deploy carrier strike group to Eastern Mediterranean as deterrent signal.",
+      "counterfactualPrompt": "What if the US had signaled restraint by not deploying carrier groups, instead relying on diplomatic channels and existing regional forces?",
+      "defaultOutcome": "US deploys two carrier strike groups, signaling maximum deterrence. Iran and Hezbollah are deterred from direct entry but proxy operations intensify across the region.",
+      "alternateOutcomes": [
+        {
+          "id": "ao_no_carrier",
+          "description": "US signals restraint — no carrier deployment. Issues diplomatic statements only. Relies on Israel's own defense capabilities and quiet backchannel diplomacy with Iran.",
+          "stateDeltasByActor": {
+            "united_states": { "NARRATIVE": -10, "POLITICAL": -15, "MILITARY": -20, "ECONOMIC": 10 },
+            "israel": { "NARRATIVE": -5, "POLITICAL": -10, "MILITARY": -10 },
+            "iran": { "NARRATIVE": 15, "POLITICAL": 10, "MILITARY": 10 },
+            "saudi_arabia": { "NARRATIVE": -5, "POLITICAL": -15, "ECONOMIC": -5 },
+            "china": { "NARRATIVE": 10, "POLITICAL": 5 },
+            "russia": { "NARRATIVE": 10, "POLITICAL": 5, "MILITARY": 5 }
+          },
+          "unlocksPivotPoints": [],
+          "blockedByPivotPoints": []
+        }
+      ]
+    },
+    {
+      "id": "pp_nuclear_threshold",
+      "date": "2024-06-01",
+      "description": "Iran approaches nuclear weapons capability — crossing the enrichment threshold to weapons-grade material.",
+      "counterfactualPrompt": "What if Iran had agreed to a JCPOA-Plus framework, accepting enhanced inspections in exchange for comprehensive sanctions relief?",
+      "defaultOutcome": "Iran continues enrichment to near-weapons-grade. IAEA reports 84% enrichment. International alarm grows but no new agreement materializes. Israel accelerates strike planning.",
+      "alternateOutcomes": [
+        {
+          "id": "ao_jcpoa_plus",
+          "description": "Iran agrees to JCPOA-Plus: caps enrichment at 3.67%, accepts enhanced IAEA inspections including military sites, in exchange for full sanctions removal and security guarantees.",
+          "stateDeltasByActor": {
+            "united_states": { "NARRATIVE": 20, "POLITICAL": 15, "ECONOMIC": 10, "MILITARY": -10 },
+            "israel": { "NARRATIVE": -5, "POLITICAL": -10, "MILITARY": -15 },
+            "iran": { "NARRATIVE": 10, "POLITICAL": 5, "ECONOMIC": 40, "MILITARY": -25 },
+            "saudi_arabia": { "NARRATIVE": -5, "POLITICAL": -10, "ECONOMIC": 10 },
+            "china": { "NARRATIVE": 5, "ECONOMIC": 15 },
+            "russia": { "NARRATIVE": -5, "POLITICAL": -5, "ECONOMIC": 5 }
+          },
+          "unlocksPivotPoints": [],
+          "blockedByPivotPoints": ["pp_us_strikes_iran"]
+        },
+        {
+          "id": "ao_secret_deal",
+          "description": "Iran makes secret backroom deal: freezes enrichment at 60% in exchange for quiet sanctions easing, without formal agreement. Ambiguity persists.",
+          "stateDeltasByActor": {
+            "united_states": { "NARRATIVE": 5, "POLITICAL": 5, "ECONOMIC": 5, "MILITARY": -5 },
+            "israel": { "NARRATIVE": -10, "POLITICAL": -5 },
+            "iran": { "NARRATIVE": 5, "ECONOMIC": 20, "MILITARY": -10 },
+            "saudi_arabia": { "NARRATIVE": -10, "POLITICAL": -5, "ECONOMIC": 5 },
+            "china": { "NARRATIVE": 0, "ECONOMIC": 10 },
+            "russia": { "NARRATIVE": 0, "ECONOMIC": 5 }
+          },
+          "unlocksPivotPoints": [],
+          "blockedByPivotPoints": []
+        }
+      ]
+    },
+    {
+      "id": "pp_us_strikes_iran",
+      "date": "2025-03-01",
+      "description": "US consideration of direct military strikes on Iranian soil versus limiting operations to proxy targets only.",
+      "counterfactualPrompt": "What if the US had limited strikes to proxy assets in Iraq and Syria only, explicitly refusing to strike Iranian territory?",
+      "defaultOutcome": "US conducts limited strikes on Iranian military infrastructure — IRGC facilities and missile production sites. Iran retaliates with ballistic missiles against US bases in Iraq. Escalation spiral begins.",
+      "alternateOutcomes": [
+        {
+          "id": "ao_proxy_only",
+          "description": "US limits all strikes to Iranian proxy assets in Iraq, Syria, and Yemen. Explicitly communicates to Tehran through Oman that Iranian soil is not targeted. De-escalation signal preserved.",
+          "stateDeltasByActor": {
+            "united_states": { "NARRATIVE": 5, "POLITICAL": 10, "MILITARY": -10, "ECONOMIC": 10 },
+            "israel": { "NARRATIVE": -10, "POLITICAL": -10, "MILITARY": -5 },
+            "iran": { "NARRATIVE": 10, "POLITICAL": 5, "MILITARY": -5, "ECONOMIC": 5 },
+            "saudi_arabia": { "NARRATIVE": 5, "POLITICAL": 10, "ECONOMIC": 15 },
+            "china": { "NARRATIVE": 5, "ECONOMIC": 10 },
+            "russia": { "NARRATIVE": 0, "POLITICAL": -5 }
+          },
+          "unlocksPivotPoints": [],
+          "blockedByPivotPoints": []
+        },
+        {
+          "id": "ao_massive_strike",
+          "description": "US launches comprehensive strike campaign against Iranian nuclear and military infrastructure, targeting enrichment facilities, missile bases, and command centers.",
+          "stateDeltasByActor": {
+            "united_states": { "NARRATIVE": -25, "POLITICAL": -15, "MILITARY": 20, "ECONOMIC": -20 },
+            "israel": { "NARRATIVE": 5, "POLITICAL": 5, "MILITARY": 15 },
+            "iran": { "NARRATIVE": 30, "POLITICAL": 20, "MILITARY": -35, "ECONOMIC": -30 },
+            "saudi_arabia": { "NARRATIVE": -10, "POLITICAL": -10, "ECONOMIC": -25 },
+            "china": { "NARRATIVE": 15, "POLITICAL": 10, "ECONOMIC": -15 },
+            "russia": { "NARRATIVE": 15, "POLITICAL": 10, "MILITARY": 5, "ECONOMIC": -10 }
+          },
+          "unlocksPivotPoints": ["pp_hormuz_closure"],
+          "blockedByPivotPoints": []
+        }
+      ]
+    },
+    {
+      "id": "pp_hormuz_closure",
+      "date": "2025-06-01",
+      "description": "Iran's potential closure or mining of the Strait of Hormuz — the world's most critical oil chokepoint.",
+      "counterfactualPrompt": "What if Iran had mined the approaches to the Strait without fully closing it, creating ambiguity and insurance risk rather than outright blockade?",
+      "defaultOutcome": "Iran partially closes the Strait of Hormuz with naval mines and fast-attack boat patrols. Oil prices double. Global economic crisis begins. US and allies launch mine-clearing operations under fire.",
+      "alternateOutcomes": [
+        {
+          "id": "ao_mining_only",
+          "description": "Iran mines approaches to the Strait without full closure — creates insurance risk premium and shipping disruption but maintains plausible deniability. Oil rises 40% instead of 100%.",
+          "stateDeltasByActor": {
+            "united_states": { "NARRATIVE": -5, "POLITICAL": -5, "MILITARY": -5, "ECONOMIC": -10 },
+            "israel": { "NARRATIVE": 0, "ECONOMIC": -5 },
+            "iran": { "NARRATIVE": 5, "POLITICAL": 5, "MILITARY": 5, "ECONOMIC": -15 },
+            "saudi_arabia": { "NARRATIVE": -5, "ECONOMIC": -15 },
+            "china": { "NARRATIVE": 5, "ECONOMIC": -20 },
+            "russia": { "NARRATIVE": 5, "ECONOMIC": 20 }
+          },
+          "unlocksPivotPoints": [],
+          "blockedByPivotPoints": []
+        },
+        {
+          "id": "ao_hormuz_open",
+          "description": "Iran refrains from any Hormuz action. Instead escalates asymmetrically through cyberattacks on Gulf state oil infrastructure and expanded proxy operations.",
+          "stateDeltasByActor": {
+            "united_states": { "NARRATIVE": 5, "POLITICAL": 5, "ECONOMIC": 10 },
+            "israel": { "NARRATIVE": 0, "ECONOMIC": 5 },
+            "iran": { "NARRATIVE": -5, "POLITICAL": -5, "MILITARY": 5, "ECONOMIC": 5 },
+            "saudi_arabia": { "NARRATIVE": 0, "POLITICAL": -5, "ECONOMIC": 5 },
+            "china": { "NARRATIVE": 0, "ECONOMIC": 10 },
+            "russia": { "NARRATIVE": -5, "ECONOMIC": -5 }
+          },
+          "unlocksPivotPoints": [],
+          "blockedByPivotPoints": []
+        }
+      ]
+    },
+    {
+      "id": "pp_china_mediation",
+      "date": "2025-04-15",
+      "description": "China's potential intervention as diplomatic mediator, leveraging its oil purchase leverage over Iran and Treasury bond leverage over the US.",
+      "counterfactualPrompt": "What if China had actively mediated between the US and Iran, offering a face-saving framework backed by economic incentives for both sides?",
+      "defaultOutcome": "China remains on the sidelines, issuing rhetorical condemnation of US strikes while quietly increasing Iranian oil purchases at a discount. No mediation attempted.",
+      "alternateOutcomes": [
+        {
+          "id": "ao_china_mediates",
+          "description": "China launches active mediation effort, hosting US-Iran talks in Beijing. Offers Iran infrastructure investment and US Treasury stability in exchange for de-escalation framework.",
+          "stateDeltasByActor": {
+            "united_states": { "NARRATIVE": -10, "POLITICAL": -5, "ECONOMIC": 15, "MILITARY": -10 },
+            "israel": { "NARRATIVE": -5, "POLITICAL": -10 },
+            "iran": { "NARRATIVE": 10, "POLITICAL": 10, "ECONOMIC": 20, "MILITARY": -10 },
+            "saudi_arabia": { "NARRATIVE": 0, "POLITICAL": -5, "ECONOMIC": 10 },
+            "china": { "NARRATIVE": 30, "POLITICAL": 25, "ECONOMIC": 10 },
+            "russia": { "NARRATIVE": -15, "POLITICAL": -10 }
+          },
+          "unlocksPivotPoints": [],
+          "blockedByPivotPoints": []
+        }
+      ]
+    }
+  ],
+  "structuralAnalogies": [
+    {
+      "pattern": "Imperial Overstretch",
+      "historicalCase": "Soviet-Afghan War (1979-1989): The USSR committed escalating military resources to a regional conflict that drained economic capacity, eroded domestic support, and accelerated imperial decline.",
+      "relevance": "US faces a potential multi-front commitment — maintaining deterrence in the Pacific, supporting Ukraine, and now escalating in the Middle East. Defense budget strain, recruitment shortfalls, and domestic war-weariness create structural parallels to Soviet overextension.",
+      "projectedConsequence": "If the US engages in sustained military operations against Iran while maintaining other commitments, expect: 1) acceleration of defense spending beyond sustainable levels, 2) allied burden-sharing failures, 3) domestic political backlash within 18 months, 4) strategic opportunity creation for China in the Pacific."
+    },
+    {
+      "pattern": "Proxy Escalation Trap",
+      "historicalCase": "Vietnam War / Gulf of Tonkin (1964-1975): A limited advisory and proxy engagement escalated through manufactured crises and mission creep into a full-scale war that consumed US strategic bandwidth for a decade.",
+      "relevance": "The pattern of strikes on proxies → direct Iranian retaliation → US counter-strikes mirrors the escalation ladder from advisory missions → retaliatory bombing → ground deployment in Vietnam. Each step appears rational in isolation but the cumulative trajectory leads to strategic entrapment.",
+      "projectedConsequence": "If escalation continues through proxy-to-direct engagement: 1) each retaliation round reduces de-escalation options, 2) domestic 'credibility' arguments lock leaders into continued escalation, 3) war aims expand beyond original objectives, 4) exit strategy becomes politically impossible without 'victory.'"
+    },
+    {
+      "pattern": "Petrodollar Fracture",
+      "historicalCase": "1973 OPEC Embargo: Arab oil producers weaponized energy supply against US-aligned nations, causing global recession, accelerating inflation, and permanently restructuring the global energy order.",
+      "relevance": "Strait of Hormuz disruption would be a 21st-century version of the 1973 shock — but with greater interdependency. 20% of global oil transits Hormuz. China and India's energy dependence on Gulf oil creates pressure for non-dollar settlement systems. Russia benefits from price spikes on its own exports.",
+      "projectedConsequence": "If Hormuz is disrupted for more than 30 days: 1) oil prices exceed $150/barrel, 2) China accelerates yuan-denominated oil purchases, 3) petrodollar system faces first serious structural challenge since 1973, 4) global recession probability exceeds 70%, 5) Gulf states reassess US security guarantees."
+    },
+    {
+      "pattern": "Security Dilemma Spiral",
+      "historicalCase": "Pre-WWI European Alliance System (1890-1914): Defensive alliances and arms races created a system where each nation's security measures increased everyone else's insecurity, culminating in a war nobody wanted from a crisis nobody could control.",
+      "relevance": "Israel's security requirements drive US commitment, which threatens Iran, which accelerates nuclear development, which threatens Israel further. Saudi Arabia and Gulf states arm defensively, creating an arms race spiral. Each actor's defensive logic produces collective offensive dynamics.",
+      "projectedConsequence": "Without active circuit-breakers: 1) arms spending in the region doubles within 3 years, 2) Saudi nuclear aspirations accelerate, 3) a minor incident (ship collision, drone misidentification) could trigger automated escalation, 4) diplomatic channels atrophy from disuse."
+    }
+  ],
+  "initialStateVectors": {
+    "united_states": {
+      "NARRATIVE": 25,
+      "POLITICAL": 20,
+      "ECONOMIC": 35,
+      "MILITARY": 85
+    },
+    "iran": {
+      "NARRATIVE": 30,
+      "POLITICAL": 15,
+      "ECONOMIC": -45,
+      "MILITARY": 35
+    },
+    "israel": {
+      "NARRATIVE": -10,
+      "POLITICAL": 30,
+      "ECONOMIC": 25,
+      "MILITARY": 65
+    },
+    "saudi_arabia": {
+      "NARRATIVE": 5,
+      "POLITICAL": 25,
+      "ECONOMIC": 55,
+      "MILITARY": 30
+    },
+    "china": {
+      "NARRATIVE": 20,
+      "POLITICAL": 40,
+      "ECONOMIC": 50,
+      "MILITARY": 45
+    },
+    "russia": {
+      "NARRATIVE": -15,
+      "POLITICAL": 10,
+      "ECONOMIC": -20,
+      "MILITARY": 40
+    }
+  },
+  "gameTheoryNodes": [
+    {
+      "pivotPointId": "pp_oct7_response",
+      "actorId": "united_states",
+      "options": [
+        {
+          "action": "full_support_escalate",
+          "payoffsByScenario": {
+            "baseline": 40,
+            "early_ceasefire": 55,
+            "prolonged_war": -20
+          },
+          "conditions": [
+            "Domestic pro-Israel lobby pressure high",
+            "Election cycle favors strong stance",
+            "Iran perceived as primary threat"
+          ]
+        },
+        {
+          "action": "conditional_support_negotiate",
+          "payoffsByScenario": {
+            "baseline": 50,
+            "early_ceasefire": 70,
+            "prolonged_war": 30
+          },
+          "conditions": [
+            "Humanitarian cost becomes politically unsustainable",
+            "Allied pressure for ceasefire intensifies",
+            "Hostage recovery prioritized"
+          ]
+        },
+        {
+          "action": "restrained_diplomatic",
+          "payoffsByScenario": {
+            "baseline": 25,
+            "early_ceasefire": 60,
+            "prolonged_war": 45
+          },
+          "conditions": [
+            "Anti-war domestic movement gains traction",
+            "Strategic focus on Pacific theater prioritized",
+            "Budget constraints force restraint"
+          ]
+        }
+      ]
+    },
+    {
+      "pivotPointId": "pp_oct7_response",
+      "actorId": "iran",
+      "options": [
+        {
+          "action": "escalate_proxy_support",
+          "payoffsByScenario": {
+            "baseline": 45,
+            "early_ceasefire": -10,
+            "prolonged_war": 60
+          },
+          "conditions": [
+            "Israel committed to extended Gaza operation",
+            "US distracted by multiple fronts",
+            "Hezbollah and Houthis operationally ready"
+          ]
+        },
+        {
+          "action": "calibrated_pressure",
+          "payoffsByScenario": {
+            "baseline": 55,
+            "early_ceasefire": 30,
+            "prolonged_war": 40
+          },
+          "conditions": [
+            "Risk of direct US retaliation perceived as high",
+            "Economic situation requires caution",
+            "Proxy assets need preservation"
+          ]
+        },
+        {
+          "action": "diplomatic_engagement",
+          "payoffsByScenario": {
+            "baseline": 20,
+            "early_ceasefire": 50,
+            "prolonged_war": -5
+          },
+          "conditions": [
+            "Sanctions pressure becomes critical",
+            "China/Russia pressure for regional stability",
+            "Domestic unrest threatens regime"
+          ]
+        }
+      ]
+    },
+    {
+      "pivotPointId": "pp_us_strikes_iran",
+      "actorId": "united_states",
+      "options": [
+        {
+          "action": "escalate_strike_iranian_soil",
+          "payoffsByScenario": {
+            "baseline": 15,
+            "proxy_only": 30,
+            "massive_strike": -25
+          },
+          "conditions": [
+            "Iran crosses nuclear threshold",
+            "Domestic political pressure for decisive action",
+            "Israeli pressure for joint strikes"
+          ]
+        },
+        {
+          "action": "proxy_targets_only",
+          "payoffsByScenario": {
+            "baseline": 45,
+            "proxy_only": 60,
+            "massive_strike": 10
+          },
+          "conditions": [
+            "Allies oppose Iranian soil strikes",
+            "Escalation risk assessment flags Hormuz closure",
+            "Diplomatic channels still open through Oman"
+          ]
+        },
+        {
+          "action": "negotiate_ceasefire",
+          "payoffsByScenario": {
+            "baseline": 35,
+            "proxy_only": 50,
+            "massive_strike": 55
+          },
+          "conditions": [
+            "Oil prices threaten US economy",
+            "Midterm election pressure",
+            "China offers mediation framework"
+          ]
+        }
+      ]
+    },
+    {
+      "pivotPointId": "pp_us_strikes_iran",
+      "actorId": "iran",
+      "options": [
+        {
+          "action": "full_retaliation",
+          "payoffsByScenario": {
+            "baseline": 10,
+            "proxy_only": -20,
+            "massive_strike": 30
+          },
+          "conditions": [
+            "Regime survival requires demonstrating strength",
+            "Military assets already damaged — nothing to lose",
+            "Asymmetric capabilities still intact"
+          ]
+        },
+        {
+          "action": "proportional_response",
+          "payoffsByScenario": {
+            "baseline": 40,
+            "proxy_only": 35,
+            "massive_strike": 45
+          },
+          "conditions": [
+            "Escalation ladder management — signal willingness to de-escalate",
+            "Chinese/Russian counsel for restraint",
+            "Preserve remaining military assets"
+          ]
+        },
+        {
+          "action": "asymmetric_cyber_proxy",
+          "payoffsByScenario": {
+            "baseline": 50,
+            "proxy_only": 45,
+            "massive_strike": 35
+          },
+          "conditions": [
+            "Conventional retaliation too risky",
+            "Cyber and proxy capabilities unaffected by strikes",
+            "Plausible deniability preserves diplomatic options"
+          ]
+        }
+      ]
+    },
+    {
+      "pivotPointId": "pp_hormuz_closure",
+      "actorId": "united_states",
+      "options": [
+        {
+          "action": "naval_escort_operations",
+          "payoffsByScenario": {
+            "baseline": 35,
+            "mining_only": 50,
+            "full_closure": 20
+          },
+          "conditions": [
+            "Allied coalition supports mine-clearing operations",
+            "Oil price spike demands visible response",
+            "Rules of engagement permit defensive action"
+          ]
+        },
+        {
+          "action": "blockade_iranian_ports",
+          "payoffsByScenario": {
+            "baseline": 10,
+            "mining_only": 20,
+            "full_closure": -15
+          },
+          "conditions": [
+            "Escalation to full naval confrontation accepted",
+            "Allied support for blockade (unlikely)",
+            "Chinese neutrality or acquiescence (very unlikely)"
+          ]
+        },
+        {
+          "action": "diplomatic_pressure_spr_release",
+          "payoffsByScenario": {
+            "baseline": 45,
+            "mining_only": 55,
+            "full_closure": 40
+          },
+          "conditions": [
+            "Strategic Petroleum Reserve can offset supply loss",
+            "Diplomatic coalition to pressure Iran viable",
+            "China willing to reduce Iranian oil purchases"
+          ]
+        }
+      ]
+    },
+    {
+      "pivotPointId": "pp_hormuz_closure",
+      "actorId": "iran",
+      "options": [
+        {
+          "action": "full_strait_closure",
+          "payoffsByScenario": {
+            "baseline": 15,
+            "mining_only": -10,
+            "full_closure": 25
+          },
+          "conditions": [
+            "Existential threat — regime survival mode",
+            "Naval assets sufficient for temporary blockade",
+            "Willing to accept massive economic self-harm"
+          ]
+        },
+        {
+          "action": "selective_mining",
+          "payoffsByScenario": {
+            "baseline": 45,
+            "mining_only": 55,
+            "full_closure": 20
+          },
+          "conditions": [
+            "Want to create cost without triggering full US naval response",
+            "Insurance market disruption achieves economic goal",
+            "Maintain plausible deniability"
+          ]
+        },
+        {
+          "action": "threat_only_no_action",
+          "payoffsByScenario": {
+            "baseline": 30,
+            "mining_only": 40,
+            "full_closure": 50
+          },
+          "conditions": [
+            "Threat alone moves oil prices significantly",
+            "Actual closure risks Chinese anger (China imports via Hormuz)",
+            "Conventional naval forces outmatched by US"
+          ]
+        }
+      ]
+    }
+  ]
+}

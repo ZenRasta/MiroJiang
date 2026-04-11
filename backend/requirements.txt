@@ -1,0 +1,11 @@
+aiosqlite
+fastapi
+httpx
+nashpy
+numpy
+pydantic
+python-dotenv
+python-multipart
+scipy
+sse-starlette
+uvicorn

@@ -249,15 +249,50 @@ The **History File** is the core data structure that drives every simulation. It
 
 There are four ways to create a history file:
 
-1. **Write it manually** — Author the JSON by hand following the schema above. A sample file is included at `backend/data/sample_history_iran_trap.json`.
+#### 1. Write it manually
 
-2. **Use the LLM-guided builder** — On the Setup page, click "Build with AI." Describe your scenario in natural language, and the LLM will ask follow-up questions before generating the full JSON structure.
+Author the JSON by hand following the schema above. A sample file is included at `backend/data/sample_history_iran_trap.json`. Upload it on the Setup page using the drag-and-drop file upload area.
 
-3. **Generate from web search** — On the Setup page, click "Search & Build." Enter a topic (e.g., "US-China trade war 2018-2024"), and the system uses Tavily to search the web, then feeds the results to the LLM to extract a structured history file.
+#### 2. Build with AI (LLM-guided builder)
 
-4. **Generate from a URL** — Provide a URL to an article or analysis, and the system extracts the content and generates a history file from it.
+The AI builder walks you through scenario creation via an interactive conversation:
 
-All generated files are validated against the schema before use. You can review and edit the JSON before launching a simulation.
+1. On the Setup page, select the **"Build with AI"** tab
+2. Describe your scenario in natural language — include the time period, key actors, central conflict, and what you want to explore. For example:
+   > *"The escalation between NATO and Russia over the Baltic states from 2024-2027, focusing on energy security, nuclear deterrence, and alliance cohesion"*
+3. Optionally toggle **"Search web for latest information"** to enrich the AI's context with current events via Tavily (requires a Tavily API key)
+4. Click **"Start Building"** — the AI analyst will respond with 2-4 clarifying questions about actors, pivot points, and structural dynamics
+5. Answer the questions in the chat interface. The conversation continues until the AI has enough detail to construct the full scenario
+6. When complete, the AI generates the full history file JSON. A summary panel shows the scenario title, number of pivot points, actors, and structural analogies
+7. Click **"Use This History File"** to load it into the simulation, or **"Download JSON"** to save it for later editing
+
+If web search was enabled, source URLs are displayed at the bottom of the builder so you can verify the references.
+
+#### 3. Search the web and generate
+
+Generate a history file directly from web search results:
+
+1. On the Setup page, select the **"Search & Build"** tab
+2. Enter a search query describing the topic — e.g., `"US-China trade war 2018-2024"` or `"India-Pakistan nuclear standoff Kashmir crisis"`
+3. The system searches the web using Tavily, aggregates the top results and Tavily's AI-generated summary, then feeds everything into the LLM along with the history file extraction prompt
+4. The LLM extracts actors, timelines, pivot points, state vectors, structural analogies, and game theory nodes from the search results
+5. The generated file is validated against the schema and returned ready for use
+
+This method is best when you want to simulate a real-world scenario and need current, factual grounding for the timeline and actors.
+
+#### 4. Generate from a URL
+
+Provide a direct URL to an article, analysis, or report:
+
+1. The system extracts the full text content from the URL using Tavily's extraction API
+2. The extracted content is passed to the LLM with the history file extraction prompt
+3. A complete history file is generated based on the article's content
+
+This is useful when you've found a specific long-form analysis or policy paper that you want to turn into a simulation scenario.
+
+---
+
+All generated files are validated against the full schema before use. The validation checks required fields, value ranges (state vector dimensions must be -100 to +100, deltas -30 to +30), pivot point ID formats, and cross-references between pivot points and outcomes. You can review and edit the JSON before launching a simulation.
 
 ### Sample history file
 
